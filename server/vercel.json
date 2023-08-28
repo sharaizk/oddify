@@ -10,11 +10,5 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ],
-  "crons": [
-    {
-      "path": "/api/cronjob/main",
-      "schedule": "*/5 * * * *"
-    }
   ]
 }
