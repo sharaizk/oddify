@@ -1,0 +1,17 @@
+.login_form {
+  height: max-content;
+  width: 30%;
+  background-color: var(--component-bg);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0px 4px 18px rgba(75, 70, 92, 0.1);
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+}

@@ -1,0 +1,48 @@
+version: "3"
+
+networks:
+  laravel:
+
+services:
+  nginx:
+    image: nginx:1.21-alpine
+    container_name: oddify_nginx
+    build: ./client
+    restart: unless-stopped
+    networks:
+      - laravel
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/var/www/html
+      - ./docker/nginx/default-tcp.conf:/etc/nginx/conf.d/default.conf
+      # - php-socket:/run/php/
+  
+  npm:
+    profiles: ['commands']
+    image: node:18-alpine
+    container_name: "oddify_npm"
+    user: 1000:1000
+    volumes:
+      - ./:/var/www/html
+    working_dir: /var/www/html
+    entrypoint: ['yarn']
+    networks:
+      - laravel
+    
+
+  server:
+    build: ./server
+    container_name: oddify_server
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    networks:
+      - laravel
+
+  # client:
+  #   build: ./client
+  #   container_name: oddify_client
+  #   restart: unless-stopped
+  #   ports:
+  #     - 8080:8080

@@ -1,0 +1,177 @@
+.t-dark {
+  color: var(--dark);
+}
+.t-error {
+  color: var(--danger);
+}
+
+.t-white {
+  color: var(--white);
+}
+
+// HEADINGS:
+
+.display1 {
+  font-family: var(--font-family-1);
+  font-style: normal;
+  font-weight: 700;
+  @include adaptiv-font(64, 32);
+  @include adaptiv-line-height(84, 42);
+}
+
+.display2 {
+  font-family: var(--font-family-1);
+  font-style: normal;
+  font-weight: 700;
+  @include adaptiv-font(56, 26);
+  @include adaptiv-line-height(78, 39);
+}
+
+.display3 {
+  font-style: normal;
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  @include adaptiv-font(38, 19);
+  @include adaptiv-line-height(52, 26);
+}
+
+.display4 {
+  font-style: normal;
+  font-family: var(--font-family-1);
+  font-weight: 700;
+  @include adaptiv-font(32, 18);
+  @include adaptiv-line-height(46, 23);
+}
+
+h1 {
+  font-family: var(--font-family-1);
+  font-style: normal;
+  font-weight: 400;
+  @include adaptiv-font(32, 18);
+  @include adaptiv-line-height(44, 22);
+}
+h2 {
+  font-family: var(--font-family-1);
+  font-style: normal;
+  font-weight: 400;
+  @include adaptiv-font(32, 18);
+  @include adaptiv-line-height(44, 22);
+}
+
+h3 {
+  font-family: var(--font-family-1);
+  font-style: normal;
+  font-weight: 400;
+  @include adaptiv-font(26, 14);
+  @include adaptiv-line-height(36, 20);
+}
+
+h4 {
+  font-family: var(--font-family-1);
+  font-style: normal;
+  font-weight: 400;
+  @include adaptiv-font(22, 12);
+  @include adaptiv-line-height(30, 17);
+}
+
+h5 {
+  font-family: var(--font-family-1);
+  font-style: normal;
+  font-weight: 400;
+  @include adaptiv-font(18, 10);
+  @include adaptiv-line-height(24, 14);
+}
+
+h6 {
+  font-family: var(--font-family-1);
+  font-style: normal;
+  font-weight: 400;
+  @include adaptiv-font(15, 8);
+  @include adaptiv-line-height(21, 11);
+}
+
+// PARAGRAPHS:
+p {
+  font-family: var(--font-family-1);
+  font-style: normal;
+  font-weight: 500;
+  @include adaptiv-font(15, 9);
+  @include adaptiv-line-height(22, 13);
+
+  &.lead {
+    font-weight: 500;
+    @include adaptiv-font(18, 10);
+    @include adaptiv-line-height(28, 21);
+  }
+  &.medium {
+    font-weight: 400;
+  }
+  &.bold {
+    font-weight: 700;
+  }
+  &.small {
+    font-weight: 400;
+    @include adaptiv-font(13, 8);
+    @include adaptiv-line-height(20, 10);
+  }
+  &.small-semi-bold {
+    font-weight: 600;
+    @include adaptiv-font(13, 8);
+    @include adaptiv-line-height(20, 10);
+  }
+  &.small-bold {
+    font-weight: 700;
+    @include adaptiv-font(13, 8);
+    @include adaptiv-line-height(20, 10);
+  }
+}
+
+.strike-through {
+  text-decoration-line: line-through;
+}
+
+caption {
+  font-weight: 400;
+  font-family: var(--font-family-2);
+  @include adaptiv-font(11, 7);
+  @include adaptiv-line-height(14, 8);
+}
+
+label {
+  font-family: var(--font-family-1);
+  @include adaptiv-font(15, 12);
+  @include adaptiv-line-height(19, 11);
+  &.lg {
+    @include adaptiv-font(18, 15);
+    @include adaptiv-line-height(21, 12);
+  }
+
+  &.md {
+    @include adaptiv-font(14, 11);
+    @include adaptiv-line-height(17, 12);
+  }
+  &.sm {
+    @include adaptiv-font(13, 10);
+    @include adaptiv-line-height(17, 12);
+  }
+  &.bold {
+    font-weight: 700;
+  }
+  &.semi-bold {
+    font-weight: 500;
+  }
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.f-w-500 {
+  font-weight: 500;
+}
+.f-w-600 {
+  font-weight: 600;
+}
+.f-w-700 {
+  font-weight: 700;
+}
